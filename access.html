@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+	<title>アクセス｜紀葉祭２０２６</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html, body {
+		overflow-x: hidden;
+	}
+
+	img {
+		display: block;
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1 }
+	}
+
+	@keyframes fadeInDown {
+		from{
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	html {
+		overflow-x: hidden;
+	}
+
+	body {
+		background-image: url(img/seigaha.jpg);
+		background-color: rgba(255,255,255,0.8);
+		background-blend-mode: lighten;
+		font-family: "Zen Old Mincho", serif;
+		margin: 0;
+		width: 100%;
+		animation: fadeIn 0.8s ease-out;
+		overflow-x: hidden;
+	}
+
+	header {
+		color: white;
+		font-size: 24px;
+		height: 100px;
+		align-content: center;
+		background: linear-gradient(160deg, #3333D2, #5555D2);
+		list-style: none;
+		display: flex;
+		position: fixed;
+		width: 100%;
+		justify-content: space-between;
+		animation: fadeInDown 1.0s ease-out;
+		z-index: 9999;
+	}
+
+	img {
+		display: block;
+		min-height: 100%;
+		/* 画像のドラッグや選択を無効化 */
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		  
+		/* クリックやタップの操作を無効化 */
+		pointer-events: none;
+	}
+
+	#tabs_list {
+		margin: auto 0;
+		padding: 0;
+		width: 100%;
+		list-style: none;
+		display: flex;
+		gap: 88px;
+		
+	}
+
+	#tabs_list li{
+		display: flex;
+		text-align: center;
+	}
+
+	#tabs_list a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.headerList {
+		position: relative;
+		display: inline-block;
+	}
+
+	.headerList::after {
+		content: '';
+		position: absolute;
+		display: block;
+		margin: 0 auto;
+		bottom: -2px;
+		width: 0;
+		height: 2px;
+		background: #dddddd;
+		transition: width 0.6s ease;
+
+	}
+
+	.headerList:hover::after {
+		width: 100%;
+	}
+
+	#contents {
+		margin: 0 auto;
+		width: 65%;
+	}
+
+	.carousel {
+		width: 100%;
+		background: #ccddff;
+		margin: 0 auto;
+		display: flex;
+	}
+
+	.carousel picture {
+		pointer-events: none;
+	}
+
+	.slide {
+		display: block;
+		height: auto;
+		margin: 0 auto;
+		white-space: nowrap;
+	}
+
+	#sponsorshipRiv {
+		height: 100%;
+		display: flex;
+		gap: 100px;
+	}
+
+	.sponSlide {
+		margin: auto 0;
+		font-size: 50px;
+		white-space: nowrap;
+	}
+
+	#slides {
+		width: 100%;
+		background: #ccddff;
+		display: flex;
+	}
+
+	#news {
+		width: 75%;
+		margin: 0 auto;
+		margin-top: 70px;
+		border: 2px solid #aaa;
+		border-radius: 5px;
+		background-color: rgba(245,245,245,0.7);
+		background-blend-mode: lighten;
+		box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	}
+
+	.newsBoxDate {
+		font-size: 20px;
+		margin: 10px;
+	}
+
+	.newsTopic {
+		display: flex;
+		font-size: 20px;
+		border-bottom: 2px solid #aaaaaa;
+	}
+
+	.newsTitle {
+		margin: auto;
+	}
+
+	#explainers {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.expBox {
+		border-radius: 20px;
+		background-color: rgba(245,245,245,1);
+		background-blend-mode: lighten;
+		box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+	}
+
+	.expBox.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.eventBox {
+		border-radius: 20px;
+		background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+		background-blend-mode: lighten;
+		box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+		padding: 50px;
+		margin-bottom: 200px;
+	}
+
+	.eventTitle {
+		display: inline-block;
+		font-size: 45px;
+		border-bottom: 2px solid #777799;
+	}
+
+	.eventContent {
+		display: flex;
+		padding-top: 24px;
+		font-size: 22px;
+	}
+
+
+	#boxes {
+		display: flex;
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 300px;
+	}
+
+	.box {
+		border: 2px solid #bbbbdd;
+		border-radius: 10px;
+		color: #333355;
+		width: 25%;
+		margin: auto;
+		font-size: 30px;
+		text-align: center;
+		background-color: rgba(255,255,255,0.5);
+		background-blend-mode: lighten;
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+		transition: background 0.3s ease; /* なめらかに変化させる */
+		transition: color 0.3 ease;
+	}
+
+	.box:hover {
+		/* カーソルが乗ったときの状態 */
+		color: #111111;
+		background-color: rgba(10,10,10,0.3);
+		background-blend-mode: darken;
+	}
+
+	.tag {
+		font-size: 60px;
+		margin-bottom: 100px;
+		/*background: linear-gradient(180deg, rgba(51, 51, 210, 1), rgba(255, 255, 255, 0));*/
+	}
+
+	footer {
+		box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+		height: 300px;
+		align-content: center;
+		background-color: rgba(186,186,255,0.5);
+		background-blend-mode: lighten;
+	}
+
+</style>
+<body>
+<header>
+	<ul id="tabs_list">
+		<li style="margin-left: 40px"><div id="icon"><a href="index.html"><b>紀葉祭</b></a></div></li>
+		<div style="margin-left: auto;"></div>
+		<li class="headerList"><a href="events.html">企画一覧</a></li>
+		<li class="headerList"><a href="sponsors.html">協賛</a></li>	
+		<li class="headerList"><a href="access.html">アクセス</a></li>
+		<li class="headerList" style="margin-right: 40px"><a href="question.html">お問い合わせ</a></li>
+	</ul>
+</header>
+
+<div class="tag">
+	<div style="text-shadow: 1px 1px 2px #444; padding-top: 200px; padding-left: 40px; margin-top: 100px; width: 65%; margin: 0 auto;">アクセス</div>
+</div>
+
+	<div id="contents">
+		<div class="expBox" style="width: 100%; margin: 0 auto; margin-bottom: 300px;">
+			<div style="padding: 70px; padding-bottom: 85px; margin-left: auto; margin-right: 0px; text-align: right;">
+				<picture>
+					<source srcset="img/access.webp" type="image/webp">
+					<img src="img/access.png" style="max-width: 100%; height: auto; display: block;">
+				</picture>
+				<p style="color: #444444; font-size: 24px; overflow-wrap: anywhere;"><br>このあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書くこのあたりに説明文を書く</p>
+			</div>
+		</div>
+	</div>
+<footer>
+	<div style="width: 70%; margin: 0 auto;">
+		<h1 style="margin: 0"><b>紀葉祭</b></h1>
+		<h3 style="margin: 0">TEL: 000-0000-0000</h3><br>
+		トップページ<br>
+		企画一覧<br>
+		協賛<br>
+		アクセス<br>
+		お問い合わせ<br>
+	</div>
+</footer>
+<div id="copyright" style="display: flex; color: #ffffff; width: 100%; height: 100px; background: linear-gradient(160deg, #3333D2, #5555D2);">
+	<div style="margin: auto;">© 2026 紀葉祭実行委員会</div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>
