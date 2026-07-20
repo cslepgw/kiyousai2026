@@ -2,7 +2,6 @@ const pic1 = `<div class="slide"><picture><source srcset="img/hanabi.webp" type=
 const pic2 = `<div class="slide"><picture><source srcset="img/bird.webp" type="image/webp"/><img src="img/bird.jpg" alt=""/></picture></div>`
 const pic3 = `<div class="slide"><picture><source srcset="img/flower.webp" type="image/webp"/><img src="img/flower.jpg" alt=""/></picture></div>`
 const slides = document.querySelector('#slides')
-const sponsorSlide = document.querySelector("#sponsorshipRiv")
 let pageHeight = 0
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
@@ -44,7 +43,6 @@ function animate() {
 	pos -= 2
 
 	slides.style.transform = `translateX(${pos}px)`
-	sponsorshipRiv.style.transform = `translateX(${pos}px)`
 
 	if (pos <= -960) {
 		pos = 0
