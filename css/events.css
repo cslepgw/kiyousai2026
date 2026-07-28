@@ -1,0 +1,345 @@
+:root {
+	--bg: #1a1a1a;
+	--line: #f5f5f5;
+	--accent: #ff5c39;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1 }
+}
+
+@keyframes fadeInDown {
+	from{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background-image: url(../img/seigaha.jpg);
+	background-color: rgba(255,255,255,0.8);
+	background-blend-mode: lighten;
+	font-family: "Zen Old Mincho", serif;
+	margin: 0;
+	width: 100%;
+	animation: fadeIn 0.8s ease-out;
+	overflow-x: hidden;
+}
+
+header {
+	color: white;
+	font-size: 24px;
+	height: 100px;
+	align-content: center;
+	background: linear-gradient(160deg, #3333D2, #5555D2);
+	list-style: none;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	animation: fadeInDown 1.0s ease-out;
+	z-index: 10;
+}
+
+img {
+	display: block;
+	min-height: 100%;
+	/* 画像のドラッグや選択を無効化 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* クリックやタップの操作を無効化 */
+	pointer-events: none;
+}
+
+#tabs_list_desktop {
+	margin: auto 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	display: flex;
+	gap: 88px;
+	
+}
+
+#tabs_list_desktop li{
+	display: flex;
+	text-align: center;
+}
+
+#tabs_list_desktop a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#icon_mobile {
+	display: none;
+	margin: auto;
+}
+
+#icon_mobile a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.headerList {
+	position: relative;
+	display: inline-block;
+}
+
+.headerList::after {
+	content: '';
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background: #dddddd;
+	transition: width 0.6s ease;
+
+}
+
+.headerList:hover::after {
+	width: 100%;
+}
+
+#contents {
+	padding-top: 120px;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.tag {
+	font-size: 60px;
+	text-shadow: 1px 1px 2px #444;
+	border-bottom: 1px solid #000;
+	padding-top: 300px;
+	padding-left: 40px;
+	margin-top: 100px;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.events {
+	width: 70%;
+}
+
+.eventBox {
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	padding: 50px;
+	margin-bottom: 200px;
+}
+
+.eventTitle {
+	display: inline-block;
+	font-size: 45px;
+	border-bottom: 2px solid #777799;
+}
+
+.eventContent {
+	padding-top: 24px;
+	font-size: 22px;
+}
+
+#floatingBox {
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	width: 300px;
+	position: fixed;
+	top: 400px;
+	left: 70%;
+	transition: opacity 0.1s ease;
+}
+
+/* ハンバーガーボタン */
+.hamburger {
+	position: fixed;
+	width: 40px;
+	height: 32px;
+	top: 36px;
+	left: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	z-index: 3331;
+}
+
+.hamburger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #f5f5f5;
+	border-radius: 2px;
+	transition: transform 0.35s ease, opacity 0.25s ease, top 0.35s ease;
+}
+
+.hamburger span:nth-child(1) { top: 4px; }
+.hamburger span:nth-child(2) { top: 15px; }
+.hamburger span:nth-child(3) { top: 26px; }
+
+/* 開いた状態 → ×に変形 */
+.hamburger.active span:nth-child(1) {
+	top: 15px;
+	transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+	top: 15px;
+	transform: rotate(-45deg);
+}
+
+/* オーバーレイメニュー */
+.menu-overlay {
+	position: fixed;
+	inset: 0;
+	background: #1a1a1a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+	z-index: 1000;
+}
+
+.menu-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.menu-list li {
+	margin: 18px 0;
+	overflow: hidden;
+}
+
+.menu-list a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	font-size: clamp(1.6rem, 5vw, 2.6rem);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	transform: translateY(110%);
+	transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1), color 0.2s ease;
+}
+
+.menu-overlay.active .menu-list a {
+	transform: translateY(0);
+}
+
+.menu-list li:nth-child(1) a { transition-delay: 0.03s; }
+.menu-list li:nth-child(2) a { transition-delay: 0.06s; }
+.menu-list li:nth-child(3) a { transition-delay: 0.09s; }
+.menu-list li:nth-child(4) a { transition-delay: 0.12s; }
+.menu-list li:nth-child(5) a { transition-delay: 0.15s; }
+
+.menu-list a:hover {
+	color: #ff5c39;
+}
+
+footer {
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+	height: 300px;
+	align-content: center;
+	background-color: rgba(186,186,255,0.5);
+	background-blend-mode: lighten;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media(820px <= width <= 1000px) {
+	header {
+		font-size: 22px;
+	}
+
+	header #tabs_list_desktop {
+		gap: 60px;
+	}
+
+	#floatingBox {
+		display: none;
+	}
+
+	.events {
+		width: 100%;
+	}
+}
+
+@media(width < 820px) {
+	header {
+		display: flex;
+	}
+
+	header #tabs_list_desktop {
+		display: none;
+	}
+
+	#contents {
+		width: 90%;
+	}
+
+	#floatingBox {
+		display: none;
+	}
+
+	.events {
+		width: 100%;
+	}
+
+	.eventSentence {
+		font-size: 18px;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	#icon_mobile {
+		display: block;
+	}
+}
