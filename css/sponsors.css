@@ -171,6 +171,51 @@ img {
 	font-size: 22px;
 }
 
+.sponsorBox_big {
+	margin: 0 auto;
+	width: 80%;
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	padding: 50px;
+	margin-bottom: 200px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.sponsorBox_big img {
+	margin: 0 auto;
+	padding: 40px 0;
+	max-width: 90%;
+}
+
+.sponsorBox_small_parent {
+	margin: 0 auto;
+	display: flex;
+	width: 900px;
+	gap: 40px;
+}
+
+.sponsorBox_small {
+	margin: 0 auto;
+	width: auto;
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	padding: 50px;
+	margin-bottom: 200px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.sponsorBox_small img {
+	margin: 0 auto;
+	padding: 20px 0;
+	max-width: 100%;
+}
+
 #floatingBox {
 	border-radius: 20px;
 	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
