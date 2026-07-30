@@ -2,12 +2,21 @@
 	--bg: #1a1a1a;
 	--line: #f5f5f5;
 	--accent: #ff5c39;
+	--footerbg: rgba(186,186,255,1);
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	visibility: hidden;
+}
+
+body.is-loaded {
+	visibility: visible;
 }
 
 html, body {
@@ -144,11 +153,9 @@ img {
 	font-size: 60px;
 	text-shadow: 1px 1px 2px #444;
 	border-bottom: 1px solid #000;
-	padding-top: 300px;
-	padding-left: 40px;
-	margin-top: 100px;
-	width: 85%;
-	margin: 0 auto;
+	padding: 0px 0px 0px 40px;
+	margin: 100px 0px 60px 0px;
+	width: 100%;
 }
 
 .events {
@@ -176,49 +183,78 @@ img {
 }
 
 .sponsorBox_big {
+	display: flex;
 	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 	border-radius: 20px;
 	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
 	background-blend-mode: lighten;
 	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
-	padding: 50px;
-	margin-top: 100px;
+	padding: 30px;
+	margin-top: 30px;
 	margin-bottom: 100px;
 	font-size: 30px;
 	text-align: center;
 }
 
-.sponsorBox_big img {
+.sponsorBox_big_img {
+	width: 45%;
 	margin: 0 auto;
-	padding: 40px 0;
-	max-width: 90%;
+	padding: 30px;
+}
+
+.sponsorBox_big_img img{
+	width: 100%;
+	object-fit: contain;
+}
+
+.sponsorBox_big_content {
+	width: 55%;
+	padding-left: 30px;
+}
+
+.sponsorBox_big_name {
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.sponsorBox_big_exp {
+	font-size: 25px;
 }
 
 .sponsorBox_small_parent {
 	margin: 0 auto;
 	display: flex;
-	width: 80%;
+	width: 90%;
 	gap: 40px;
 }
 
 .sponsorBox_small {
 	margin: 0 auto;
-	width: auto;
-	border-radius: 20px;
+	width: 400px;
+	border-radius: 10px;
 	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
 	background-blend-mode: lighten;
-	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
-	padding: 40px;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	font-size: 40px;
+	box-shadow: 0 1px 20px rgba(100, 100, 100, 0.3);
+	padding: 25px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 30px;
 	text-align: center;
 }
 
 .sponsorBox_small img {
 	margin: 0 auto;
 	max-width: 100%;
+}
+
+.sponsorBox_small_name {
+	font-size: 28px;
+}
+
+
+.sponsorBox_small_exp {
+	font-size: 19px;
 }
 
 #floatingBox {
@@ -335,15 +371,20 @@ footer {
 	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
 	height: 300px;
 	align-content: center;
-	background-color: rgba(186,186,255,0.5);
+	background-color: var(--footerbg);
 	background-blend-mode: lighten;
+}
+
+footer a {
+	color: inherit;
+	text-decoration: none;
 }
 
 .hamburger {
 	display: none;
 }
 
-@media(950px <= width <= 1170px) {
+@media(980px <= width <= 1180px) {
 	header {
 		font-size: 22px;
 	}
@@ -359,9 +400,48 @@ footer {
 	.events {
 		width: 100%;
 	}
+
+	.tag {
+		font-size: 60px;
+		text-shadow: 1px 1px 2px #444;
+		border-bottom: 1px solid #000;
+		padding: 0px 0px 0px 40px;
+		margin: 100px 0px 50px 0px;
+		width: 100%;
+	}
+
+	.sponsorBox_big {
+		padding: 20px;
+	}
+
+	.sponsorBox_big_name {
+		font-size: 45px;
+		margin-bottom: 20px;
+	}
+
+	.sponsorBox_big_exp {
+		font-size: 20px;
+	}
+
+	.sponsorBox_small {
+		padding: 25px;
+	}
+
+	.sponsorBox_small_name {
+		font-size: 20px;
+	}
+
+	.sponsorBox_small_exp {
+		font-size: 14px;
+	}
+
+	.sponsorBox_small_parent {
+		width: 100%;
+		gap: 20px;
+	}
 }
 
-@media(width < 950px) {
+@media(width < 980px) {
 	header {
 		display: flex;
 	}
@@ -382,6 +462,15 @@ footer {
 		width: 100%;
 	}
 
+	.tag {
+		font-size: 60px;
+		text-shadow: 1px 1px 2px #444;
+		border-bottom: 1px solid #000;
+		padding: 0px 0px 0px 40px;
+		margin: 100px 0px 20px 0px;
+		width: 100%;
+	}
+
 	.eventSentence {
 		font-size: 18px;
 	}
@@ -392,5 +481,68 @@ footer {
 
 	#icon_mobile {
 		display: block;
+	}
+
+	.tag {
+		font-size: 30px;
+	}
+
+	.sponsorBox_big {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		border-radius: 20px;
+		background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+		background-blend-mode: lighten;
+		box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+		padding: 20px;
+		margin-top: 50px;
+		margin-bottom: 100px;
+		font-size: 23px;
+		text-align: center;
+	}
+
+	.sponsorBox_big_img {
+		width: 100%;
+		padding: 0px;
+	}
+
+	.sponsorBox_big_img img {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.sponsorBox_big_content {
+		padding: 0;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.sponsorBox_big_name {
+		font-size: 23px;
+		margin-bottom: 10px;
+	}
+
+	.sponsorBox_big_exp {
+		font-size: 13px;
+	}
+
+
+
+	.sponsorBox_small {
+		padding: 10px;
+	}
+
+	.sponsorBox_small_name {
+		font-size: 17px;
+	}
+
+	.sponsorBox_small_exp {
+		font-size: 11px;
+	}
+
+	.sponsorBox_small_parent {
+		width: 100%;
+		gap: 20px;
 	}
 }

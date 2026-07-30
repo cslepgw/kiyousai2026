@@ -85,44 +85,6 @@ overlay.querySelectorAll('a').forEach(link => {
 	});
 });
 
-/*
-<div class="slide">
-		   			<picture>
-						<source srcset="img/hanabi.webp" type="image/webp"/>
-						<img src="img/hanabi.jpg" alt=""/>
-					</picture>
-		   		</div>
-		   		<div class="slide" style="">
-		   			<picture>
-						<source srcset="img/bird.webp" type="image/webp">
-						<img src="img/bird.png" alt="">
-					</picture>
-				</div>
-		   		<div class="slide" style="">
-		   			<picture>
-						<source srcset="img/flower.webp" type="image/webp">
-						<img src="img/flower.jpg" alt="">
-					</picture>
-		   		</div>
-・DOMを付け加える方法
-・要素を移動させる方法
-btnprev.addEventListener("click", () => {
-	if (current == 0) {
-		current = 2
-	} else {
-		current--
-	}
-	
-	picRiv(current)
-})
-
-btnnext.addEventListener("click", () => {
-	if (current == 2) {
-		current = 0
-	} else {
-		current++
-	}
-
-	picRiv(current)
-})
-*/
+window.addEventListener('load', function () {
+	document.body.classList.add('is-loaded');
+});

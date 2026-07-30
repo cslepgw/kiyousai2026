@@ -1,6 +1,9 @@
 const floatingBox = document.querySelector("#floatingBox")
+const btn = document.getElementById('hamburgerBtn');
+const overlay = document.getElementById('menuOverlay');
 let contentsHeight = 0
 let pageHeight = 0
+
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
@@ -15,16 +18,13 @@ window.addEventListener('load', (event) => {
 	contentsHeight = document.querySelector("#contents").getBoundingClientRect().height;
 	window.addEventListener('scroll', (event) => {
 
-		if( contentsHeight-276 < window.scrollY ) {
+		if( contentsHeight-530 < window.scrollY ) {
 			floatingBox.style.opacity = 0
 		} else {
 			floatingBox.style.opacity = 1
 		}
 	});
 });
-
-const btn = document.getElementById('hamburgerBtn');
-const overlay = document.getElementById('menuOverlay');
 
 btn.addEventListener('click', () => {
 	const isOpen = btn.classList.toggle('active');
@@ -42,4 +42,8 @@ overlay.querySelectorAll('a').forEach(link => {
 		btn.setAttribute('aria-expanded', 'false');
 		document.body.style.overflow = '';
 	});
+});
+
+window.addEventListener('load', function () {
+	document.body.classList.add('is-loaded');
 });

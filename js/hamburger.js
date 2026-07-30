@@ -18,3 +18,7 @@ overlay.querySelectorAll('a').forEach(link => {
 		document.body.style.overflow = '';
 	});
 });
+
+window.addEventListener('load', function () {
+	document.body.classList.add('is-loaded');
+});

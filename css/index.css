@@ -1,7 +1,19 @@
+:root {
+	--footerbg: rgba(186,186,255,1);
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	visibility: hidden;
+}
+
+body.is-loaded {
+	visibility: visible;
 }
 
 html, body {
@@ -199,8 +211,9 @@ img {
 	width: 75%;
 	margin: 0 auto;
 	margin-top: 70px;
-	padding: 20px;
-	border-radius: 5px;
+	color: #333;
+	padding: 40px;
+	border-radius: 15px;
 	background-color: rgba(245,245,245,0.7);
 	background-blend-mode: lighten;
 	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
@@ -219,6 +232,11 @@ img {
 
 .newsTitle {
 	margin: auto;
+}
+
+#newsh1 {
+	font-size: 15px;
+	border-bottom: 2px solid #aaaaaa;
 }
 
 #explainers {
@@ -407,11 +425,16 @@ footer {
 	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
 	height: 300px;
 	align-content: center;
-	background-color: rgba(186,186,255,0.5);
+	background-color: var(--footerbg);
 	background-blend-mode: lighten;
 }
 
-@media(950px <= width <= 1170px) {
+footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media(980px <= width <= 1180px) {
 	header {
 		font-size: 22px;
 	}
@@ -422,6 +445,7 @@ footer {
 
 	.expBox {
 		font-size: 20px;
+		margin-bottom: 130px;
 	}
 
 	.expBoxInside {
@@ -439,7 +463,7 @@ footer {
 	}
 }
 
-@media(width < 950px) {
+@media(width < 980px) {
 	img {
 		display: block;
 
@@ -516,13 +540,7 @@ footer {
 
 	#news {
 		width: 90%;
-		margin: 0 auto;
-		margin-top: 70px;
-		padding: 20px;
-		border-radius: 5px;
-		background-color: rgba(245,245,245,0.7);
-		background-blend-mode: lighten;
-		box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+		border-radius: 15px;
 	}
 
 	#newsInside {
