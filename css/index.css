@@ -392,6 +392,7 @@ img {
 .menu-list li:nth-child(3) a { transition-delay: 0.09s; }
 .menu-list li:nth-child(4) a { transition-delay: 0.12s; }
 .menu-list li:nth-child(5) a { transition-delay: 0.15s; }
+.menu-list li:nth-child(6) a { transition-delay: 0.18s; }
 
 .menu-list a:hover {
 	color: #ff5c39;
@@ -410,7 +411,7 @@ footer {
 	background-blend-mode: lighten;
 }
 
-@media(820px <= width <= 1000px) {
+@media(950px <= width <= 1170px) {
 	header {
 		font-size: 22px;
 	}
@@ -438,7 +439,7 @@ footer {
 	}
 }
 
-@media(width < 820px) {
+@media(width < 950px) {
 	img {
 		display: block;
 
@@ -470,20 +471,19 @@ footer {
 
 	.expBox {
 		font-size: 20px;
+		margin-bottom: 100px;
 	}
 
 	.expBoxInside {
-		padding: 70px;
-		padding-top: 55px;
-		padding-bottom: 85px;
+		padding: 40px;
 	}
 
 	.expBoxTitle {
-		font-size: 50px;
+		font-size: 38px;
 	}
 
 	.expBoxSentence {
-		font-size: 27px;
+		font-size: 20px;
 	}
 
 	#floatingBox {

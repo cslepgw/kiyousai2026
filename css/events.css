@@ -274,6 +274,7 @@ img {
 .menu-list li:nth-child(3) a { transition-delay: 0.09s; }
 .menu-list li:nth-child(4) a { transition-delay: 0.12s; }
 .menu-list li:nth-child(5) a { transition-delay: 0.15s; }
+.menu-list li:nth-child(6) a { transition-delay: 0.18s; }
 
 .menu-list a:hover {
 	color: #ff5c39;
@@ -291,7 +292,7 @@ footer {
 	display: none;
 }
 
-@media(820px <= width <= 1000px) {
+@media(950px <= width <= 1170px) {
 	header {
 		font-size: 22px;
 	}
@@ -309,7 +310,7 @@ footer {
 	}
 }
 
-@media(width < 820px) {
+@media(width < 950px) {
 	header {
 		display: flex;
 	}
