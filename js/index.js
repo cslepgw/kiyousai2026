@@ -1,5 +1,5 @@
-const pic1 = `<div class="slide"><picture><source srcset="img/hanabi.webp" type="image/webp"/><img src="img/hanabi.jpg" alt=""/></picture></div>`
-const pic2 = `<div class="slide"><picture><source srcset="img/bird.webp" type="image/webp"/><img src="img/bird.jpg" alt=""/></picture></div>`
+const pic1 = `<div class="slide"><picture><source srcset="img/waidaibuilding.webp" type="image/webp"/><img src="img/waidaibuilding.jpg" alt=""/></picture></div>`
+const pic2 = `<div class="slide"><picture><source srcset="img/helicopter.webp" type="image/webp"/><img src="img/helicopter.jpg" alt=""/></picture></div>`
 const pic3 = `<div class="slide"><picture><source srcset="img/flower.webp" type="image/webp"/><img src="img/flower.jpg" alt=""/></picture></div>`
 const slides = document.querySelector('#slides')
 let pageHeight = 0
