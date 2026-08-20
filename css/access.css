@@ -365,12 +365,24 @@ footer a {
 		gap: 60px;
 	}
 
+	.expBox {
+		display: block;
+	}
+
 	#floatingBox {
 		display: none;
 	}
 
 	.events {
 		width: 100%;
+	}
+
+	.map_big {
+		display: none;
+	}
+
+	.map_small {
+		display: block;
 	}
 }
 
