@@ -348,6 +348,14 @@ footer a {
 	display: none;
 }
 
+.map_big {
+	display: block;
+}
+
+.map_small {
+	display: none;
+}
+
 @media(980px <= width <= 1180px) {
 	header {
 		font-size: 22px;
@@ -403,7 +411,11 @@ footer a {
 		display: block;
 	}
 
-	.map {
-		width: 100%;
+	.map_big {
+		display: none;
+	}
+
+	.map_small {
+		display: block;
 	}
 }
