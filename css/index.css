@@ -543,6 +543,14 @@ footer a {
 		height: 300px;
 	}
 
+	.whiteCover {
+		height: 300px;
+	}
+
+	.carousel {
+		height: 300px;
+	}
+
 	#news {
 		width: 90%;
 		border-radius: 15px;
