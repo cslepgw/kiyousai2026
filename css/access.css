@@ -398,4 +398,12 @@ footer a {
 	#icon_mobile {
 		display: block;
 	}
+
+	.expBox {
+		display: block;
+	}
+
+	.map {
+		width: 100%;
+	}
 }
