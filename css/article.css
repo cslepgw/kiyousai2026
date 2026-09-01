@@ -378,7 +378,16 @@ footer a {
 		display: none;
 	}
 
+	.expBoxSentence {
+		font-size: 16px;
+	}
+
+	.expBox {
+		padding: 25px;
+	}
+
 	.tag {
+		padding: 0px;
 		font-size: 30px;
 	}
 
