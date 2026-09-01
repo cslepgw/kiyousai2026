@@ -214,12 +214,14 @@ img {
 }
 
 .sponsorBox_big_name {
+	font-weight: bold;
 	font-size: 50px;
 	margin-bottom: 20px;
 }
 
 .sponsorBox_big_exp {
 	font-size: 25px;
+	overflow-wrap: anywhere;
 }
 
 .sponsorBox_small_parent {
@@ -249,12 +251,14 @@ img {
 }
 
 .sponsorBox_small_name {
-	font-size: 28px;
+	font-weight: bold;
+	font-size: 22px;
 }
 
 
 .sponsorBox_small_exp {
 	font-size: 19px;
+	overflow-wrap: anywhere;
 }
 
 #floatingBox {
