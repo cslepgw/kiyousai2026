@@ -221,6 +221,7 @@ img {
 
 .sponsorBox_big_exp {
 	font-size: 25px;
+	text-align: left;
 	overflow-wrap: anywhere;
 }
 
@@ -233,7 +234,7 @@ img {
 
 .sponsorBox_small {
 	margin: 0 auto;
-	width: 400px;
+	width: 450px;
 	border-radius: 10px;
 	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
 	background-blend-mode: lighten;
@@ -258,6 +259,7 @@ img {
 
 .sponsorBox_small_exp {
 	font-size: 19px;
+	text-align: left;
 	overflow-wrap: anywhere;
 }
 
