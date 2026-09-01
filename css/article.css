@@ -378,6 +378,10 @@ footer a {
 		display: none;
 	}
 
+	.tag {
+		font-size: 30px;
+	}
+
 	.events {
 		width: 100%;
 	}
