@@ -122,10 +122,6 @@ img {
 	display: inline-block;
 }
 
-.tag {
-	margin-bottom: 30px;
-}
-
 .headerList::after {
 	content: '';
 	position: absolute;
@@ -144,17 +140,25 @@ img {
 }
 
 #contents {
-	padding-top: 120px;
+	padding-top: 200px;
 	width: 85%;
 	margin: 0 auto;
 }
 
-.expBox {
-	display: flex;
+.tag {
+	font-size: 60px;
+	text-shadow: 1px 1px 2px #444;
+	border-bottom: 1px solid #000;
+	padding: 0px 0px 0px 40px;
+	margin: 0px 0px 60px 0px;
 	width: 100%;
-	padding: 50px;
-	margin-bottom: 200px; 
-	border-radius: 20px;
+}
+
+.expBox {
+	width: 100%;
+	margin-bottom: 300px; 
+	border-radius: 10px;
+	padding: 55px;
 	background-color: rgba(245,245,245,1);
 	background-blend-mode: lighten;
 	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
@@ -163,49 +167,65 @@ img {
 	transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.expBoxImage {
-	width: 300px;
-}
-
-.expBoxImage img {
-	width: 300px;
-
-}
-
-.expBoxContent {
-	overflow-wrap: anywhere;
-	padding: 0px 30px 30px 30px;
-}
-
-.expBoxTitle {
-	width: 100%;
-	font-size: 50px;
-	padding: 0px 0px 10px 0px;
-}
-
-.expBoxName {
-	padding: 10px;
-	font-size: 32px;
-	text-align: center;
-}
-
-.expBoxSentence {
-	width: 100%;
-	font-size: 25px;
-}
-
 .expBox.visible {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.tag {
-	font-size: 60px;
-	text-shadow: 1px 1px 2px #444;
-	border-bottom: 1px solid #000;
-	padding: 0px 0px 0px 40px;
-	margin: 100px 0px 60px 0px;
-	width: 100%;
+.expBoxInside {
+	padding: 110px;
+	padding-top: 55px;
+	padding-bottom: 85px
+}
+
+.expBoxTitle {
+	color: #444477;
+	font-size: 90px;
+	border-bottom: 3px solid #777799;
+	display: inline-block;
+	margin: 0;
+}
+
+.expBoxSentence {
+	color: #444444;
+	font-size: 28px;
+	overflow-wrap: anywhere;
+}
+
+.events {
+	width: 70%;
+}
+
+.eventBox {
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	padding: 50px;
+	margin-bottom: 200px;
+}
+
+.eventTitle {
+	display: inline-block;
+	font-size: 45px;
+	border-bottom: 2px solid #777799;
+}
+
+.eventContent {
+	padding-top: 24px;
+	font-size: 22px;
+}
+
+#floatingBox {
+	border-radius: 20px;
+	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
+	background-blend-mode: lighten;
+	box-shadow: 0 5px 20px rgba(100, 100, 100, 0.3);
+	width: 300px;
+	position: fixed;
+	top: 400px;
+	left: 70%;
+	transition: opacity 0.1s ease;
 }
 
 /* ハンバーガーボタン */
@@ -364,22 +384,6 @@ footer a {
 
 	.eventSentence {
 		font-size: 18px;
-	}
-
-	.expBox {
-		display: block;
-	}
-
-	.expBox img {
-		margin: 0 auto;
-	}
-
-	.expBoxPerson {
-		margin: 0;
-	}
-
-	.expBoxImage {
-		margin: 0 auto;
 	}
 
 	.hamburger {
