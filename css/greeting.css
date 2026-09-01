@@ -169,7 +169,6 @@ img {
 
 .expBoxImage img {
 	width: 300px;
-
 }
 
 .expBoxContent {
@@ -368,6 +367,7 @@ footer a {
 
 	.expBox {
 		display: block;
+		padding: 10px;
 	}
 
 	.expBox img {
@@ -380,6 +380,30 @@ footer a {
 
 	.expBoxImage {
 		margin: 0 auto;
+		padding: 30px;
+		width: auto;
+	}
+
+	.expBoxImage img {
+		width: 100%;
+	}
+
+	.expBoxName {
+		font-size: 19px;
+	}
+
+	.expBoxContent {
+		overflow-wrap: anywhere;
+		padding: 0px 30px 30px 30px;
+	}
+
+	.expBoxTitle {
+		font-weight: bold;
+		font-size: 23px;
+	}
+
+	.expBoxSentence {
+		font-size: 12px;
 	}
 
 	.hamburger {
