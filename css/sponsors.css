@@ -215,12 +215,12 @@ img {
 
 .sponsorBox_big_name {
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 30px;
 	margin-bottom: 20px;
 }
 
 .sponsorBox_big_exp {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: left;
 	overflow-wrap: anywhere;
 }
@@ -253,12 +253,12 @@ img {
 
 .sponsorBox_small_name {
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 15px;
 }
 
 
 .sponsorBox_small_exp {
-	font-size: 19px;
+	font-size: 15px;
 	text-align: left;
 	overflow-wrap: anywhere;
 }
