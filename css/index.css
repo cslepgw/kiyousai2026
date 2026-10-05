@@ -575,3 +575,31 @@ footer a {
 		margin: auto;
 	}
 }
+
+#countdown {
+	text-align: center;
+	margin: 40px auto;
+}
+#countdownLabel {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+#countdownTime {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+.cdUnit span {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #3333D2;
+}
+.cdUnit small {
+	margin-left: 4px;
+	font-size: 1rem;
+}
+@media (max-width: 600px) {
+	.cdUnit span { font-size: 1.8rem; }
+	#countdownTime { gap: 8px; }
+}
