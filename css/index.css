@@ -275,7 +275,7 @@ img {
 
 .expBoxTitle {
 	color: #444477;
-	font-size: 90px;
+	font-size: 30px;
 	border-bottom: 3px solid #777799;
 	display: inline-block;
 	margin: 0;
@@ -283,7 +283,7 @@ img {
 
 .expBoxSentence {
 	color: #444444;
-	font-size: 35px;
+	font-size: 20px;
 	overflow-wrap: anywhere;
 }
 
