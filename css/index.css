@@ -588,18 +588,26 @@ footer a {
 #countdownTime {
 	display: flex;
 	justify-content: center;
+	flex-wrap: nowrap;   /* 4つのブロックを必ず1行に */
 	gap: 16px;
+}
+.cdUnit {
+	display: flex;
+	align-items: baseline;   /* 数字と単位の下端をそろえる */
+	white-space: nowrap;     /* 単位だけ折り返さない */
 }
 .cdUnit span {
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: #3333D2;
+	font-variant-numeric: tabular-nums;   /* 数字の幅を固定してガタつきを防ぐ */
 }
 .cdUnit small {
 	margin-left: 4px;
 	font-size: 1rem;
 }
 @media (max-width: 600px) {
-	.cdUnit span { font-size: 1.8rem; }
-	#countdownTime { gap: 8px; }
+	#countdownTime { gap: 6px; }
+	.cdUnit span { font-size: 1.6rem; }
+	.cdUnit small { font-size: 0.75rem; margin-left: 2px; }
 }
