@@ -121,7 +121,5 @@ function updateCountdown() {
 	document.querySelector('#cdSeconds').textContent = String(seconds).padStart(2, '0')
 }
 
-updateCountdown()
-const timerId = setInterval(updateCountdown, 1000)
 const timerId = setInterval(updateCountdown, 1000)
 updateCountdown()
