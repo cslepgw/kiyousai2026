@@ -88,3 +88,38 @@ overlay.querySelectorAll('a').forEach(link => {
 window.addEventListener('load', function () {
 	document.body.classList.add('is-loaded');
 });
+
+const START = new Date('2026-10-17T10:00:00+09:00')
+const END = new Date('2026-10-17T20:00:00+09:00')
+
+function updateCountdown() {
+	const now = new Date()
+	const label = document.querySelector('#countdownLabel')
+	const time = document.querySelector('#countdownTime')
+
+	if (now >= END) {
+		label.textContent = '紀葉祭は終了しました。ご来場ありがとうございました!'
+		time.style.display = 'none'
+		clearInterval(timerId)
+		return
+	}
+	if (now >= START) {
+		label.textContent = '紀葉祭 開催中!'
+		time.style.display = 'none'
+		return
+	}
+
+	const diff = START - now
+	const days = Math.floor(diff / 86400000)
+	const hours = Math.floor(diff / 3600000) % 24
+	const minutes = Math.floor(diff / 60000) % 60
+	const seconds = Math.floor(diff / 1000) % 60
+
+	document.querySelector('#cdDays').textContent = days
+	document.querySelector('#cdHours').textContent = String(hours).padStart(2, '0')
+	document.querySelector('#cdMinutes').textContent = String(minutes).padStart(2, '0')
+	document.querySelector('#cdSeconds').textContent = String(seconds).padStart(2, '0')
+}
+
+updateCountdown()
+const timerId = setInterval(updateCountdown, 1000)
