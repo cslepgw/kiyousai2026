@@ -123,3 +123,5 @@ function updateCountdown() {
 
 updateCountdown()
 const timerId = setInterval(updateCountdown, 1000)
+const timerId = setInterval(updateCountdown, 1000)
+updateCountdown()
