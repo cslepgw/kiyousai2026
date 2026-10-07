@@ -611,3 +611,62 @@ footer a {
 	.cdUnit span { font-size: 1.6rem; }
 	.cdUnit small { font-size: 0.75rem; margin-left: 2px; }
 }
+
+.noticeBox .expBoxInside {
+	padding: 55px 70px 65px;
+}
+.noticeBox .noticeBody {
+	font-size: 18px;
+	line-height: 1.9;
+}
+.noticeIntro {
+	margin-top: 28px;
+	text-indent: 1em;
+}
+.noticeSection {
+	margin-top: 36px;
+}
+.noticeHeading {
+	font-size: 1.15em;
+	font-weight: bold;
+	color: #444477;
+	border-left: 6px solid #777799;
+	padding-left: 12px;
+	margin-bottom: 12px;
+}
+.noticeBadge {
+	color: #c0392b;
+	margin-left: 4px;
+}
+.noticeList {
+	padding-left: 1.4em;
+}
+.noticeList li {
+	margin-bottom: 10px;
+}
+.noticeList strong {
+	color: #444477;
+}
+
+/* ②写真撮影の項目だけ目立たせる */
+.noticeSection.important {
+	background: rgba(192, 57, 43, 0.06);
+	border-radius: 10px;
+	padding: 18px 22px;
+}
+.noticeSection.important .noticeHeading {
+	border-left-color: #c0392b;
+}
+
+@media (max-width: 979px) {
+	.noticeBox .expBoxInside {
+		padding: 28px 18px 36px;
+	}
+	.noticeBox .noticeBody {
+		font-size: 16px;
+		line-height: 1.8;
+	}
+	.noticeSection.important {
+		padding: 14px 16px;
+	}
+}
