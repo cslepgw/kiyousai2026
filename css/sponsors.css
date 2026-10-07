@@ -238,10 +238,10 @@ img {
 	border-radius: 10px;
 	background-color: rgba(245,245,245,1); /*245, 245, 245, 1*/
 	background-blend-mode: lighten;
-	box-shadow: 0 1px 20px rgba(100, 100, 100, 0.3);
+	box-shadow: 0 1px 20px rgba(100, 100, 100, 0.1);
 	padding: 25px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top:15px;
+	margin-bottom: 0px;
 	font-size: 30px;
 	text-align: center;
 }
