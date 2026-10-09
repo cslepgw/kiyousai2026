@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "Zen Old Mincho";
+	src: url(../fonts/zen-old-mincho.woff2) format("woff2");
+	font-display: block;
+}
+
 :root {
 	--bg: #1a1a1a;
 	--line: #f5f5f5;
@@ -9,14 +15,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
-	visibility: hidden;
-}
-
-body.is-loaded {
-	visibility: visible;
 }
 
 html, body {
@@ -49,7 +47,7 @@ html {
 }
 
 body {
-	background-image: url(../img/seigaha.jpg);
+	background-image: url(../img/seigaha.webp);
 	background-color: rgba(255,255,255,0.8);
 	background-blend-mode: lighten;
 	font-family: "Zen Old Mincho", serif;
@@ -348,12 +346,9 @@ footer a {
 	display: none;
 }
 
-.map_big {
+/* 地図は1つだけ埋め込み、画面幅が狭いときは横幅いっぱいにする */
+.map {
 	display: block;
-}
-
-.map_small {
-	display: none;
 }
 
 @media(980px <= width <= 1180px) {
@@ -377,12 +372,8 @@ footer a {
 		width: 100%;
 	}
 
-	.map_big {
-		display: none;
-	}
-
-	.map_small {
-		display: block;
+	.map iframe {
+		width: 100%;
 	}
 }
 
@@ -424,11 +415,7 @@ footer a {
 		display: block;
 	}
 
-	.map_big {
-		display: none;
-	}
-
-	.map_small {
-		display: block;
+	.map iframe {
+		width: 100%;
 	}
 }

@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "Zen Old Mincho";
+	src: url(../fonts/zen-old-mincho.woff2) format("woff2");
+	font-display: block;
+}
+
 :root {
 	--footerbg: rgba(186,186,255,1);
 }
@@ -6,14 +12,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
-	visibility: hidden;
-}
-
-body.is-loaded {
-	visibility: visible;
 }
 
 html, body {
@@ -42,7 +40,7 @@ img {
 }
 
 body {
-	background-image: url(../img/seigaha.jpg);
+	background-image: url(../img/seigaha.webp);
 	background-color: rgba(255,255,255,0.8);
 	background-blend-mode: lighten;
 	font-family: "Zen Old Mincho", serif;
@@ -142,28 +140,38 @@ img {
 	width: 100%;
 }
 
+/* スライドショー：#slides の中身を JS で2倍に複製し、半分（=1周分）流したら先頭に戻すことで継ぎ目なくループさせる */
 .carousel {
-	display: absolute;
 	height: 640px;
 	background: #ccddff;
-	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slides {
 	display: flex;
+	width: max-content;
+	height: 100%;
+	animation: slideshow var(--slide-duration, 60s) linear infinite;
+	will-change: transform;
 }
 
-.carousel picture {
-	height: 640px;
-	pointer-events: none;
+@keyframes slideshow {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
 }
 
-.carousel img {
-	height: 640px;
-}
-
-.slide {
+.slide,
+.slide picture {
 	display: block;
-	height: auto;
-	margin: 0 auto;
-	white-space: nowrap;
+	height: 100%;
+	flex-shrink: 0;
+}
+
+.slide img {
+	display: block;
+	height: 100%;
+	width: auto;
+	pointer-events: none;
 }
 
 #sponsorshipRiv {
@@ -176,12 +184,6 @@ img {
 	margin: auto 0;
 	font-size: 50px;
 	white-space: nowrap;
-}
-
-#slides {
-	width: 100%;
-	background: #ccddff;
-	display: flex;
 }
 
 .whiteCover {
@@ -252,7 +254,7 @@ img {
 
 .expBox {
 	width: 100%;
-	margin-bottom: 100px; 
+	margin-bottom: 300px; 
 	border-radius: 20px;
 	background-color: rgba(245,245,245,1);
 	background-blend-mode: lighten;
@@ -533,14 +535,6 @@ footer a {
 
 	#icon_mobile {
 		display: block;
-	}
-
-	.slide {
-		height: 300px;
-	}
-
-	.slide img {
-		height: 300px;
 	}
 
 	.whiteCover {
