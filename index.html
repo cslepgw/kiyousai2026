@@ -4,9 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./css/index.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+	<link rel="preload" href="./fonts/zen-old-mincho.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="icon" type="image/png" href="./img/favicon.png">
 	<title>トップページ｜紀葉祭２０２６</title>
 </head>
@@ -41,9 +39,16 @@
 	</nav>
 </header>
 	<div id="contents" >
-		<div class="whiteCove">
-			<div class="carousel">
-				<div class="slides" id="slides"></div>
+		<!-- スライドショー：画像を増やす・差し替えるときは .slide をコピーして編集（width/height は画像の実寸） -->
+		<div class="carousel">
+			<div class="slides" id="slides">
+				<div class="slide"><picture><source srcset="img/slideshow/waidaibuilding.webp" type="image/webp"/><img src="img/slideshow/waidaibuilding.jpg" width="1707" height="1280" alt="" fetchpriority="high"/></picture></div>
+				<div class="slide"><img src="img/slideshow/IMG_0932_0.webp" width="1920" height="1280" alt=""/></div>
+				<div class="slide"><picture><source srcset="img/slideshow/helicopter.webp" type="image/webp"/><img src="img/slideshow/helicopter.jpg" width="1280" height="853" alt=""/></picture></div>
+				<div class="slide"><img src="img/slideshow/IMG_0938_0.webp" width="1920" height="1280" alt="" loading="lazy"/></div>
+				<div class="slide"><picture><source srcset="img/slideshow/ougigashima.webp" type="image/webp"/><img src="img/slideshow/ougigashima.jpg" width="1707" height="1280" alt="" loading="lazy"/></picture></div>
+				<div class="slide"><img src="img/slideshow/IMG_1504_0.webp" width="1920" height="1280" alt="" loading="lazy"/></div>
+				<div class="slide"><img src="img/slideshow/IMG_1508_0.webp" width="1920" height="1280" alt="" loading="lazy"/></div>
 			</div>
 		</div>
 		
