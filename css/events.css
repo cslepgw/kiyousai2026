@@ -352,4 +352,15 @@ footer a {
 	#icon_mobile {
 		display: block;
 	}
+
+	.map {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto 30px;
+	}
+	.map img {
+	width: 100%;
+	height: auto;
+	display: block;
+	}
 }
