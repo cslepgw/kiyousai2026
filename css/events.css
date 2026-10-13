@@ -364,3 +364,18 @@ footer a {
 	display: block;
 	}
 }
+
+css
+.eventImage {
+	width: 100%;
+	max-width: 600px;
+	margin: 10px auto 20px;
+	box-sizing: border-box;
+}
+.eventImage picture,
+.eventImage img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
